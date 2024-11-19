@@ -55,3 +55,23 @@ fun maps(){
     println(1 in immutableMap.keys)
     println(immutableMap.keys.contains(1))
 }
+
+fun arrays(){
+    var simpleArray = arrayOf("Nile", "Amazon", "Yangtze")
+    println(simpleArray.joinToString())
+
+    // empty array
+    // var exampleArray = emptyArray<String>()
+    // var exampleArray: Array<String> = emptyArray()
+
+    val numbersArray = Array<Int> (3) {0}
+
+    val nullArray: Array<Int?> = arrayOfNulls(3)
+    println(nullArray.joinToString())
+}
+
+fun smartCast(x: Any) {
+    if (x is String) {
+        print(x.length) // x is automatically cast to String
+    }
+}
