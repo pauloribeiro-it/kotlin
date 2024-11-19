@@ -52,4 +52,6 @@ fun maps(){
     val mutableMap: Map<Int, String> = mutableMapOf(1 to "a", 2 to "b")
     println(immutableMap)
     println(mutableMap)
+    println(1 in immutableMap.keys)
+    println(immutableMap.keys.contains(1))
 }
