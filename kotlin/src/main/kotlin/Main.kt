@@ -1,11 +1,12 @@
 package org.nb
 
 fun main() {
-    mutableAndImmutableVariables()
-    variableDeclaration()
-    stringTemplate()
-    lists()
-    sets()
+//    mutableAndImmutableVariables()
+//    variableDeclaration()
+//    stringTemplate()
+//    lists()
+//    sets()
+    maps()
 }
 
 fun mutableAndImmutableVariables(){
@@ -44,4 +45,11 @@ fun sets(){
     val mutableSet: Set<String> = mutableSetOf("Xbox", "Playstation", "Nintendo")
     println(immutableSet)
     println(mutableSet)
+}
+
+fun maps(){
+    val immutableMap: Map<Int, String> = mapOf(1 to "a", 2 to "b")
+    val mutableMap: Map<Int, String> = mutableMapOf(1 to "a", 2 to "b")
+    println(immutableMap)
+    println(mutableMap)
 }
