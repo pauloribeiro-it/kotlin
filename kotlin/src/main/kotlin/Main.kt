@@ -8,7 +8,9 @@ fun main() {
 //    sets()
 //    maps()
 //    ifs()
-    whenUsage()
+//    whenUsage()
+//    arrays()
+    forLoop()
 }
 
 fun mutableAndImmutableVariables(){
@@ -133,5 +135,28 @@ fun whenUsage(){
         in validNumbers -> print("x is valid")
         !in 10..20 -> print("x is outside the range")
         else -> print("none of the above")
+    }
+
+}
+fun forLoop(){
+    var numbers = arrayOf(1,2,3,4,5,6,7,8,9,10)
+    for(number in numbers)
+        print("$number ")
+
+    println()
+
+    for(number in numbers.indices step 2)
+        print("$number ")
+
+    println()
+
+    for (i in 6 downTo 0 step 2) {
+        print(i)
+    }
+
+    println()
+
+    for ((index, value) in numbers.withIndex()) {
+        println("the element at $index is $value")
     }
 }
