@@ -6,7 +6,9 @@ fun main() {
 //    stringTemplate()
 //    lists()
 //    sets()
-    maps()
+//    maps()
+//    ifs()
+    whenUsage()
 }
 
 fun mutableAndImmutableVariables(){
@@ -73,5 +75,63 @@ fun arrays(){
 fun smartCast(x: Any) {
     if (x is String) {
         print(x.length) // x is automatically cast to String
+    }
+}
+
+fun ifs(){
+    var message: String
+    val age = 19
+
+    message = if(age > 18) "adult" else "young"
+    println(message)
+}
+
+fun whenUsage(){
+    val gender = 'M'
+    var description: String
+    val month = 11
+    val car = "Honda"
+
+    //with subject
+    when(gender){
+        'M' -> println("Masculine")
+        'F' -> println("Feminine")
+        else -> println("Not identified")
+    }
+
+    //without subject
+    when {
+        gender == 'M' -> println("Masculine")
+        gender == 'F' -> println("Feminine")
+        else -> println("Not identified")
+    }
+
+    //expression
+    description =  when(gender){
+        'M' -> "Masculine"
+        'F' -> "Feminine"
+        else -> "Not identified"
+    }
+
+    println(description)
+
+    when(month){
+        month % 2 -> println("Even")
+        else -> println("Odd")
+    }
+
+    when (car){
+        "Honda", "Toyota", "Nissan" -> println("Japanese")
+        "Audi", "Volkswagen", "BMW" -> println("German")
+        "Aston Martin", "McLaren"-> println("Britain")
+    }
+    val x = 10
+    val validNumbers = arrayOf(10, 20, 30, 40, 50)
+
+    when (x) {
+        in 1..10 -> print("x is in the range")
+        in validNumbers -> print("x is valid")
+        !in 10..20 -> print("x is outside the range")
+        else -> print("none of the above")
     }
 }
