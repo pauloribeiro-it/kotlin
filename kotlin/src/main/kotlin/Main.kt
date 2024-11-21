@@ -1,5 +1,7 @@
 package org.nb
 
+import java.lang.Exception
+
 fun main() {
 //    mutableAndImmutableVariables()
 //    variableDeclaration()
@@ -10,7 +12,11 @@ fun main() {
 //    ifs()
 //    whenUsage()
 //    arrays()
-    forLoop()
+//    forLoop()
+//    requireTest(false)
+//    check(false)
+//    error("Message")
+    usingMyException()
 }
 
 fun mutableAndImmutableVariables(){
@@ -159,4 +165,22 @@ fun forLoop(){
     for ((index, value) in numbers.withIndex()) {
         println("the element at $index is $value")
     }
+}
+
+fun requireTest(success: Boolean){
+    require(success) {"Require $success"}
+}
+
+fun checkTest(success: Boolean){
+    check(success) {"Success $success"}
+}
+
+fun errorTest(){
+    error("Error test")
+}
+
+class MyException(message: String = "MyException") : Exception(message)
+
+fun usingMyException(){
+    throw MyException("Testing")
 }
