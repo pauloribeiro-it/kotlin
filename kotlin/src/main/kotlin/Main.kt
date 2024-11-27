@@ -16,7 +16,7 @@ fun main() {
 //    requireTest(false)
 //    check(false)
 //    error("Message")
-    usingMyException()
+//    usingMyException()
 }
 
 fun mutableAndImmutableVariables(){
@@ -181,6 +181,6 @@ fun errorTest(){
 
 class MyException(message: String = "MyException") : Exception(message)
 
-fun usingMyException(){
+fun usingMyException():Nothing{
     throw MyException("Testing")
 }
